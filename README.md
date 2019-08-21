@@ -1,6 +1,11 @@
-[![Maintained by Gruntwork.io](https://img.shields.io/badge/maintained%20by-gruntwork.io-%235849a6.svg)](https://gruntwork.io/?ref=repo_google_gke)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/gruntwork-io/terraform-google-gke.svg?label=latest)](https://github.com/gruntwork-io/terraform-google-gke/releases/latest)
-![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.12.0-blue.svg)
+# Koodoo Note
+
+ This is a fork of Gruntwork's repo [here](https://github.com/gruntwork-io/terraform-google-network). 
+
+ It contains a few fixes relating to this issue: [gruntwork-io/terraform-google-gke: Cluster services/pods secondary subnets overlap causing service IP issues. #52](https://github.com/gruntwork-io/terraform-google-gke/issues/52).
+
+[![Maintained by Koodoo](https://img.shields.io/badge/maintained%20by-Koodoo-%235849a6.svg)](https://koodoo.io/)
+[![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.12.0-blue.svg)](https://github.com/hashicorp/terraform/releases)
 
 # Google Kubernetes Engine (GKE) Module
 
