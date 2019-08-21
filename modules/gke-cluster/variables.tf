@@ -33,6 +33,11 @@ variable "cluster_secondary_range_name" {
   type        = string
 }
 
+variable "services_secondary_range_name" {
+  description = "The name of the secondary range within the subnetwork for the cluster to use"
+  type        = string
+}
+
 # ---------------------------------------------------------------------------------------------------------------------
 # OPTIONAL PARAMETERS
 # Generally, these values won't need to be changed.
