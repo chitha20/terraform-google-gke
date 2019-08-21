@@ -1,6 +1,6 @@
 # Koodoo Note
 
- This is a fork of Gruntwork's repo [here](https://github.com/gruntwork-io/terraform-google-network). 
+ This is a fork of Gruntwork's repo [here](https://github.com/gruntwork-io/terraform-google-gke). 
 
  It contains a few fixes relating to this issue: [gruntwork-io/terraform-google-gke: Cluster services/pods secondary subnets overlap causing service IP issues. #52](https://github.com/gruntwork-io/terraform-google-gke/issues/52).
 
