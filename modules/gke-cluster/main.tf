@@ -19,7 +19,7 @@ resource "google_container_cluster" "cluster" {
 
   logging_service    = var.logging_service
   monitoring_service = var.monitoring_service
-  min_master_version = local.kubernetes_version
+  min_master_version = data.google_container_engine_versions.location.latest_master_version
 
   # The API requires a node pool or an initial count to be defined; that initial count creates the
   # "default node pool" with that # of nodes.
@@ -105,8 +105,7 @@ resource "google_container_cluster" "cluster" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 locals {
-  kubernetes_version = data.google_container_engine_versions.location.latest_master_version
-  network_project    = var.network_project != "" ? var.network_project : var.project
+  network_project = var.network_project != "" ? var.network_project : var.project
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
