@@ -105,8 +105,7 @@ resource "google_container_cluster" "cluster" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 locals {
-  latest_version     = data.google_container_engine_versions.location.latest_master_version
-  kubernetes_version = var.kubernetes_version != "latest" ? var.kubernetes_version : local.latest_version
+  kubernetes_version = data.google_container_engine_versions.location.latest_master_version
   network_project    = var.network_project != "" ? var.network_project : var.project
 }
 
@@ -116,6 +115,7 @@ locals {
 
 // Get available master versions in our location to determine the latest version
 data "google_container_engine_versions" "location" {
-  location = var.location
-  project  = var.project
+  location       = var.location
+  project        = var.project
+  version_prefix = var.kubernetes_version_prefix
 }
